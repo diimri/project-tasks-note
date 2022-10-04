@@ -1,0 +1,49 @@
+<%= form_for(@project) do |f| %>
+
+  <% if project.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+        <% project.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <br>
+  <br>
+  <div>
+    <div>
+    <label>
+      <%= f.label :"Project Name" %>
+    </label>
+    <text_field> <%= f.text_field :name %></text_field>
+    
+    </div>
+
+
+
+<div id="form_div">
+  <h2>Tasks</h2>
+
+   <div> <button ><%= link_to_add_association "Add New Task", f, :tasks%> </button> </div>
+
+   
+    <%= f.fields_for :tasks do |t| %>
+   <div >     <%= render "task_fields", :f => t %></div>
+    <% end %>
+  
+</div>
+    
+    
+
+</div>
+
+    <div>
+      <%= f.submit %>
+    </div>
+
+<% end %>

@@ -1,0 +1,44 @@
+// Place all the styles related to the Projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+#open-contacts-dialog-btn {
+	text-align: center;
+  	color: black;
+  	margin-bottom: 15px;
+  	padding: 5px;
+  	float: right 
+  	
+}
+
+
+table{
+	width: 200px;
+        overflow: hidden;
+        border: 3px solid #ff1100;
+        clear: both;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+
+text_field {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+      }
+
+
+
+#form_div {
+ width: 300px;
+  border: 3px solid black;
+  padding: 30px;
+  margin: 20px;
+}
+
+#remove_bt {
+  float: right;
+	 }

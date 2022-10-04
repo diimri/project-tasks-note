@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Projects</h1>
+
+<%= button_to "New Project", new_project_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %>
+
+
+<table>
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>No of Task </th>
+      <th>Actions </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.tasks.size()  %></td>
+        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= paginate @projects, class: "pagination-next icon-right-open-mini" %>
