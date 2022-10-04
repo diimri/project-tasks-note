@@ -5,20 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 3.1.2
 
-* System dependencies
+* System dependencies  cocoon gem , used for nested addition of tasks
+* Kaminari gem used to paginated the data set
 
-* Configuration
+Rails version 6.1.7
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a tool to keep note of all the tasks that has to be done in a project.
